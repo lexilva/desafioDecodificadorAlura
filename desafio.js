@@ -42,6 +42,7 @@ function decriptar(){
 function encriptar(){
 	let msg = textoDigitado.value;
 	msg = filtraMensagem(msg);
+	let botaoCopiar = document.querySelector('#botaoCopiar');
 	let resposta = document.querySelector('#resposta');
 	for (var i = 0; i < msg.length;i++){
 			if(ehvogal(msg.charAt(i)) ){
@@ -54,6 +55,7 @@ function encriptar(){
 	resolucao.removeChild(img);
 	resolucao.removeChild(p);
 	resposta.textContent = mensagemEncriptada;
+	botaoCopiar.style.display = 'flex';
 }
 var textoDigitado = document.getElementById('input');
 var btncriptografar = document.querySelector('#btncodifica');
@@ -64,12 +66,10 @@ let p = document.querySelector('section p');
 btncriptografar.onclick = encriptar;
 btndescriptografar.onclick = decriptar;
 let btnCopiar = document.querySelector('#btncopiar');
-	btncopiar.addEventListener("click",function(){
+	btnCopiar.addEventListener("click",function(){
 	document.getElementById('resposta').select();
 	document.execCommand('copy');
-	//resolucao.removeChild('#resposta');
 	document.getElementById('resposta').value = "";
-	//resolucao.removeChild('button');
 	btncopiar.style.display = ('none');
 	textoDigitado.focus();
 	btncriptografar.style.display = ('none');
