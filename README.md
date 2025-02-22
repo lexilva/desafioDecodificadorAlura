@@ -12,4 +12,4 @@ Decriptador de texto
 * A letra "u" é convertida para "ufat" 
 * Também não pode processar letra maiúsculas ou caracteres especiais
 
-https://www.alura.com.br/challenges/challenge-one-logica
+https://lexilva.github.io/desafioDecodificadorAlura/
